@@ -1,0 +1,298 @@
+body {
+    font-family: 'Helvetica', Arial, sans-serif;
+    background-color: #1C2024;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#prompt {
+    border-radius: 40px; 
+    border: #16272F ;
+    background-color: #16272F;
+    color: white;
+    padding: 10px; 
+    font-size: 1em; 
+    width: 100%; 
+    flex-grow: 1;
+    box-sizing: border-box;
+    box-sizing: border-box; /* Ensures padding and border are included in the width */
+    resize: none; /* Prevent resizing */
+    margin: 10px; /* Space below the textarea */
+}
+
+#prompt::placeholder {
+    color: #487DB1;
+}
+
+/* Container should fill the entire viewport */
+.chat-container {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+
+
+.chat-header {
+    background-color: #16272F ;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    font-size: 1.5em;
+    flex-shrink: 0;
+}
+
+#logo{
+    width: 50PX;
+    height: auto;
+    margin: 5px;
+}
+
+.chat-body {
+    background-color: #1C2024;
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 5px 10px grey;
+}
+
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 10px;
+    align-items: flex-start; 
+}
+
+.message-container {
+    display: flex;
+    align-items: flex-start; 
+    width: 100%;
+    max-width: 80%;
+    margin-bottom: 10px;
+}
+
+.message-container.user {
+    justify-content: flex-end;
+    align-self: flex-end;
+}
+
+.message-container.bot {
+    justify-content: flex-start;
+    align-self: flex-start;
+}
+
+
+.chat-body .message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 80%;
+    word-wrap: break-word;
+    box-sizing: border-box;
+    align-self: flex-start;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.chat-body .message.user {
+    background-color: #00BF63;
+    color: white;
+    text-align: left;
+    align-self: flex-start; 
+}
+
+.chat-body .message.bot {
+    background-color: #f1f1f1;
+    text-align: left;
+    align-self: flex-end; 
+}
+
+
+.chat-input {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    background-color: #1C2024;
+    flex-shrink: 0;
+    position: relative;
+    border: #1C2024;
+}
+
+
+.chat-input input {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    font-size: 1em;
+    border-radius: 5px;
+    /* border: 1px solid #ccc; */
+}
+
+
+/* .chat-input button {
+    background-color: #00BF63;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+.chat-input button:hover {
+    background-color: #00f17d;
+} */
+
+.chat-input button {
+    background-color: #00BF63; /* Background color */
+    color: white; /* Text color */
+    border: none;
+    padding: 10px; /* Adjust padding to maintain round shape */
+    font-size: 1em; /* Font size */
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 50%; /* Makes the button round */
+    width: 40px; /* Adjust width */
+    height: 40px; /* Adjust height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chat-input button:hover {
+    background-color: #00f17d; /* Hover color */
+}
+
+
+.chat-body {
+    overflow-y: auto;
+}
+
+.starter-container {
+    text-align: center;
+    padding: 20px;
+    color: #ffffff;
+}
+
+.starter-container h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.starter-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.starter-option {
+    background-color: #2c2c2c;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 80%;
+    max-width: 300px;
+    display: flex; /* Use flexbox */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    gap: 10px; /* Gap between icon and text */
+    text-align: center; /* Align text in the center */
+}
+
+.starter-option:hover {
+    background-color: #3c3c3c;
+}
+
+.starter-option .icon {
+    margin-right: 10px;
+    font-size: 1.2em;
+    align-items: center;
+}
+
+/* Action icons container styling */
+.action-icons {
+    display: flex;
+    align-items: center;
+    position: relative; 
+}
+
+#send-button {
+    background-color: #00BF63;
+    color: white;
+    border: none;
+    padding: 10px; /* Adjust padding for consistent button size */
+    font-size: 1em;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 50%; /* Makes the button round */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#send-button:hover {
+    background-color: #00f17d;
+}
+
+.attachment-icon {
+    background-color: transparent; 
+    color: #ffffff; 
+    border: none; 
+    padding: 0; 
+    font-size: 1.5em; 
+    cursor: pointer;
+    margin-left: 10px;
+    width: auto; 
+    height: auto; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.attachment-icon:hover {
+    color: #73a0cd; 
+}
+
+.popup-menu {
+    display: none; /* Initially hidden */
+    position: absolute;
+    bottom: 100%; /* Position above the attachment icon */
+    left: 0;
+    background-color: #16272F;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.1); /* Shadow adjusted for upward appearance */
+    z-index: 1000; /* Ensure it appears above other content */
+    margin-bottom: 10px; /* Space between the attachment icon and the popup menu */
+}
+
+.popup-menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.popup-menu a:hover {
+    background-color: #203945;
+}
